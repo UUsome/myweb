@@ -1,0 +1,117 @@
+# ============================================
+# MyWeb Project - Unified .gitignore
+# Backend: Python/FastAPI | Frontend: Vue3/Vite
+# ============================================
+
+# ────────────────────────────────────────────
+# 1. 敏感配置 & 环境变量（⚠️ 绝不可提交）
+# ────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+*.pem
+*.key
+*.crt
+secrets/
+
+# ────────────────────────────────────────────
+# 2. 数据库文件（⚠️ 可能包含真实用户数据）
+# ────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ────────────────────────────────────────────
+# 3. Python 后端
+# ────────────────────────────────────────────
+# 虚拟环境
+venv/
+.venv/
+env/
+ENV/
+
+# 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.dmypy.json
+
+# 构建产物
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+
+# 测试 & 覆盖率
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ────────────────────────────────────────────
+# 4. Node 前端 (Vue3/Vite/pnpm)
+# ────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+
+# 构建产物
+dist/
+dist-ssr/
+*.local
+
+# 日志
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# 编辑器
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# TypeScript
+*.tsbuildinfo
+
+# ────────────────────────────────────────────
+# 5. 上传文件 & 静态资源（运行时生成）
+# ────────────────────────────────────────────
+uploads/
+media/
+staticfiles/
+
+# ────────────────────────────────────────────
+# 6. 操作系统文件
+# ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ────────────────────────────────────────────
+# 7. 日志文件
+# ────────────────────────────────────────────
+*.log
+logs/
+log/

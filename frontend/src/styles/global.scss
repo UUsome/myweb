@@ -1,0 +1,251 @@
+@use './variables' as *;
+
+// ── Element Plus Theme Overrides ──
+:root {
+  --el-color-primary: #1B2A4A;
+  --el-color-primary-light-3: #2C406E;
+  --el-color-primary-light-5: #4A5F8A;
+  --el-color-primary-light-7: #7A8EAA;
+  --el-color-primary-light-8: #A0B0C4;
+  --el-color-primary-light-9: #C8D2DE;
+  --el-color-primary-dark-2: #121E36;
+
+  --el-color-success: #5A8F5A;
+  --el-color-warning: #C4973E;
+  --el-color-danger: #C26B6B;
+  --el-color-info: #8A8A85;
+
+  --el-color-success-light-3: #7AAC7A;
+  --el-color-warning-light-3: #D8B05E;
+  --el-color-danger-light-3: #D48A8A;
+  --el-color-info-light-3: #A8A8A3;
+
+  --el-bg-color: #F7F4F0;
+  --el-bg-color-overlay: #FFFFFF;
+  --el-bg-color-page: #F7F4F0;
+
+  --el-text-color-primary: #2C2C2C;
+  --el-text-color-regular: #4A4A4A;
+  --el-text-color-secondary: #888880;
+  --el-text-color-placeholder: #B0ADA5;
+  --el-text-color-disabled: #C8C8C0;
+
+  --el-border-color: #E8E2D8;
+  --el-border-color-light: #F0EBE3;
+  --el-border-color-lighter: #F5F1EA;
+  --el-border-color-extra-light: #FAF8F4;
+
+  --el-border-radius-base: 8px;
+  --el-border-radius-small: 4px;
+  --el-border-radius-round: 20px;
+
+  --el-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --el-box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --el-box-shadow-lighter: 0 1px 2px rgba(0, 0, 0, 0.03);
+
+  --el-fill-color: #F5F0E8;
+  --el-fill-color-light: #FAF8F4;
+  --el-fill-color-lighter: #FCFBF9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $text-primary;
+  background-color: $bg-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $primary-light;
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+// ── Page Container ──
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// ── Card Style ──
+.card {
+  background: $bg-white;
+  border-radius: $border-radius-lg;
+  border: 1px solid $border-color;
+  padding: 20px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: $shadow-sm;
+  }
+}
+
+// ── Section Title ──
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $primary-color;
+}
+
+// ── Section Title (amber accent variant) ──
+.section-title-accent {
+  font-size: 20px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $accent-color;
+}
+
+// ── Grid Layouts ──
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+// ── Loading ──
+.loading-trigger {
+  text-align: center;
+  padding: 20px;
+  color: $text-secondary;
+}
+
+// ── Filter Bar ──
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  align-items: center;
+}
+
+// ── Markdown 内容渲染 ──
+.markdown-body {
+  line-height: 1.8;
+  font-size: 15px;
+  color: $text-primary;
+  word-wrap: break-word;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: $primary-color;
+  }
+
+  h1 { font-size: 1.6em; border-bottom: 1px solid $border-light; padding-bottom: 8px; }
+  h2 { font-size: 1.35em; border-bottom: 1px solid $border-light; padding-bottom: 6px; }
+  h3 { font-size: 1.15em; }
+
+  p { margin: 0 0 12px; }
+
+  ul, ol { padding-left: 24px; margin-bottom: 12px; }
+  li { margin-bottom: 4px; }
+
+  blockquote {
+    margin: 0 0 12px;
+    padding: 8px 16px;
+    border-left: 4px solid $accent-color;
+    background: $sand-light;
+    color: $text-regular;
+  }
+
+  code {
+    padding: 2px 6px;
+    background: $sand-light;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    color: $danger-color;
+  }
+
+  pre {
+    margin: 0 0 16px;
+    padding: 16px;
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow-x: auto;
+
+    code {
+      background: transparent;
+      color: #d4d4d4;
+      padding: 0;
+      font-size: 13px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 12px 0;
+  }
+
+  a { color: $primary-light; }
+  a:hover { text-decoration: underline; color: $primary-color; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 16px;
+  }
+
+  th, td {
+    border: 1px solid $border-color;
+    padding: 8px 12px;
+    text-align: left;
+  }
+
+  th { background: $sand-light; font-weight: 600; }
+
+  hr {
+    border: none;
+    border-top: 1px solid $border-color;
+    margin: 24px 0;
+  }
+}
+
+// ── Responsive ──
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-auto {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+
+    .el-select, .el-input {
+      width: 100% !important;
+    }
+  }
+
+  .page-container {
+    padding: 12px;
+  }
+}

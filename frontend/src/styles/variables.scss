@@ -1,0 +1,54 @@
+// ── Color Palette ──
+// Primary: Deep Navy Blue
+$primary-color: #1B2A4A;
+$primary-light: #2C406E;
+$primary-dark: #121E36;
+$primary-bg: rgba(27, 42, 74, 0.06);
+
+// Secondary: Warm Sand / Beige
+$sand-light: #F5F0E8;
+$sand-base: #E8DDCC;
+$sand-dark: #C4B59B;
+
+// Accent: Muted Amber
+$accent-color: #C4973E;
+$accent-light: #D8B05E;
+$accent-dark: #A87E2E;
+
+// Status (muted, low saturation)
+$success-color: #5A8F5A;
+$warning-color: #C4973E;
+$danger-color: #C26B6B;
+$info-color: #8A8A85;
+
+// ── Text Colors ──
+$text-primary: #2C2C2C;
+$text-regular: #4A4A4A;
+$text-secondary: #888880;
+$text-placeholder: #B0ADA5;
+$text-on-dark: #E8E4DE;
+
+// ── Background ──
+$bg-color: #F7F4F0;
+$bg-white: #FFFFFF;
+$bg-warm: #F5F0E8;
+
+// ── Border ──
+$border-color: #E8E2D8;
+$border-light: #F0EBE3;
+
+// ── Layout ──
+$header-height: 60px;
+$sidebar-width: 240px;
+$sidebar-collapsed-width: 64px;
+
+// ── Border Radius ──
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+// ── Shadows (minimal) ──
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.07);
