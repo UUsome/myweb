@@ -95,3 +95,5 @@ export const adminApi = {
 
   deleteCase: (id: number) => apiClient.delete(`/admin/expert_cases/${id}`),
 }
+
+export type * from '../types/models'

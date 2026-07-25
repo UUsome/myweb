@@ -25,3 +25,5 @@ export const interactionsApi = {
   deleteComment: (commentId: number) =>
     apiClient.delete(`/comments/${commentId}`),
 }
+
+export type * from '../types/models'

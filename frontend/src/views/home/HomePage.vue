@@ -1,7 +1,7 @@
 <template>
   <div class="home-page page-container">
     <section class="hero">
-      <h1>欢迎来到 MyWeb</h1>
+      <h1>欢迎来到 火风网</h1>
       <p>连接专家与机会的知识社区</p>
       <div class="hero-actions">
         <el-button type="primary" size="large" @click="router.push('/experts')">

@@ -8,6 +8,7 @@ from sqlalchemy.orm import joinedload
 
 from src.apps.experthub.models import (
     Case,
+    ContactPage,
     Expert,
     Platform,
     ServiceDefinition,
@@ -427,3 +428,24 @@ async def delete_case(db: AsyncSession, case_id: int) -> bool:
             expert.case_count = count_result.scalar_one()
 
     return result is not None
+
+
+# ── Contact Page Services ──
+
+
+async def get_contact_content(db: AsyncSession) -> ContactPage | None:
+    stmt = select(ContactPage).order_by(ContactPage.id.desc()).limit(1)
+    result = await db.execute(stmt)
+    return result.scalar_one_or_none()
+
+
+async def update_contact_content(db: AsyncSession, content: str) -> ContactPage:
+    contact = await get_contact_content(db)
+    if contact is None:
+        contact = ContactPage(content=content)
+        db.add(contact)
+    else:
+        contact.content = content
+    await db.flush()
+    await db.refresh(contact)
+    return contact

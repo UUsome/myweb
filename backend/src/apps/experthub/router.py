@@ -9,6 +9,7 @@ from src.apps.experthub import services as expert_services
 from src.apps.experthub.schemas import (
     CaseBase,
     CaseResponse,
+    ContactContent,
     ExpertCreate,
     ExpertDetailResponse,
     ExpertHoverResponse,
@@ -311,3 +312,32 @@ async def delete_case(
     if not deleted:
         raise NotFound(message="案例不存")
     return success(message="案例删除成功")
+
+
+# ── Contact Page ──
+
+
+@router.get(
+    "/contact",
+    summary="获取联系我们内容",
+    description="获取联系我们页面的 Markdown 内容",
+)
+async def get_contact(
+    db: AsyncSession = Depends(get_db),
+) -> APIResponse[ContactContent]:
+    content = await expert_services.get_contact_content(db)
+    return success(data=ContactContent(content=content.content if content else ""))
+
+
+@router.put(
+    "/contact",
+    summary="更新联系我们内容",
+    description="管理员更新联系我们页面的 Markdown 内容",
+)
+async def update_contact(
+    req: ContactContent,
+    db: AsyncSession = Depends(get_db),
+    admin: User = Depends(get_current_admin_user),
+) -> APIResponse[ContactContent]:
+    content = await expert_services.update_contact_content(db, req.content)
+    return success(data=ContactContent(content=content.content))

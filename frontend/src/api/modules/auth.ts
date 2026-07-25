@@ -1,6 +1,7 @@
 import apiClient from '../client'
 import type { LoginParams, LoginResponse, UserInfo } from '../types/models'
 
+
 export const authApi = {
   login: (params: LoginParams) =>
     apiClient.post<LoginResponse>('/auth/login', params),
@@ -15,3 +16,5 @@ export const authApi = {
 
   getMe: () => apiClient.get<UserInfo>('/users/me'),
 }
+
+export type * from '../types/models'

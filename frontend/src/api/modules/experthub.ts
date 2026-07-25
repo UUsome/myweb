@@ -32,3 +32,5 @@ export const experthubApi = {
   getCase: (caseId: number) =>
     apiClient.get<CaseItem & { content: string | null }>(`/experts/cases/${caseId}`),
 }
+
+export type * from '../types/models'

@@ -7,3 +7,5 @@ export const usersApi = {
 
   getUser: (id: number) => apiClient.get<UserPublic>(`/users/${id}`),
 }
+
+export type * from '../types/models'

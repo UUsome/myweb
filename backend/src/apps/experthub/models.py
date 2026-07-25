@@ -33,6 +33,14 @@ expert_services = Table(
 # ── Tag / Service Definitions ──
 
 
+class ContactPage(CoreModel):
+    """Contact page content."""
+    __tablename__ = "contact_pages"
+
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
+    content: Mapped[str] = mapped_column(Text, nullable=False, default="")
+
+
 class TagDefinition(CoreModel):
     """Expert tag/category definition."""
     __tablename__ = "expert_tag_definitions"

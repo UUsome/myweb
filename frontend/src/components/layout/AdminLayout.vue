@@ -4,7 +4,7 @@
     <aside class="admin-sidebar" :class="{ collapsed: appStore.sidebarCollapsed }">
       <div class="sidebar-header">
         <router-link to="/admin" class="sidebar-logo">
-          <span v-if="!appStore.sidebarCollapsed">MyWeb 管理</span>
+          <span v-if="!appStore.sidebarCollapsed">火风网 管理</span>
           <span v-else>M</span>
         </router-link>
       </div>
@@ -55,6 +55,11 @@
           <el-menu-item index="/admin/posts">帖子管理</el-menu-item>
           <el-menu-item index="/admin/categories">板块管理</el-menu-item>
         </el-sub-menu>
+
+        <el-menu-item index="/admin/contact">
+          <el-icon><Document /></el-icon>
+          <template #title>联系我们</template>
+        </el-menu-item>
       </el-menu>
 
       <div class="sidebar-footer">

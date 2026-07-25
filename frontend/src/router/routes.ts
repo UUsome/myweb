@@ -78,6 +78,13 @@ export const routes: RouteRecordRaw[] = [
         component: () => import('@/views/jobhub/JobDetailPage.vue'),
         meta: { requiresAuth: false },
       },
+      // Contact
+      {
+        path: 'contact',
+        name: 'Contact',
+        component: () => import('@/views/experthub/ContactPage.vue'),
+        meta: { title: '联系我们', requiresAuth: false },
+      },
     ],
   },
   // Admin
@@ -145,6 +152,12 @@ export const routes: RouteRecordRaw[] = [
         path: 'categories',
         name: 'AdminCategories',
         component: () => import('@/views/admin/forum/CategoryList.vue'),
+      },
+      {
+        path: 'contact',
+        name: 'ContactEdit',
+        component: () => import('@/views/admin/ContactEditPage.vue'),
+        meta: { title: '编辑联系我们', requiresAdmin: true },
       },
     ],
   },

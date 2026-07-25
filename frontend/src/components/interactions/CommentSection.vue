@@ -29,7 +29,7 @@
         </div>
         <div class="comment-content">{{ comment.content }}</div>
         <div class="comment-actions">
-          <el-button text size="small" @click="startReply(comment)">回复</el-button>
+        <!-- <el-button text size="small" @click="startReply(comment)">回复</el-button> -->
           <el-button
             v-if="comment.user_id === userStore.userInfo?.id || userStore.isAdmin"
             text
@@ -42,6 +42,7 @@
         </div>
 
         <!-- Reply Form -->
+<!-- 
         <div v-if="replyTo === comment.id" class="reply-form">
           <el-input v-model="replyContent" :rows="2" type="textarea" placeholder="回复..." />
           <div class="form-actions">
@@ -51,14 +52,19 @@
             </el-button>
           </div>
         </div>
+-->
 
         <!-- Nested Children -->
+<!--
         <CommentItem
           v-for="child in comment.children"
           :key="child.id"
           :comment="child"
           :depth="comment.depth + 1"
         />
+-->
+
+
       </div>
     </div>
 

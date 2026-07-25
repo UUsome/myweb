@@ -45,5 +45,7 @@ cd E:\web\myweb\frontend
 pnpm dev
 
 
-PS E:\web\myweb\backend> .\venv\Scripts\Activate.ps1
+
+cd E:\web\myweb\backend
+.\venv\Scripts\Activate.ps1
 python -m uvicorn main:app --reload

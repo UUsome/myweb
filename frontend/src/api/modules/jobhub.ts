@@ -24,3 +24,5 @@ export const jobApi = {
   getAvailableTags: () =>
     apiClient.get<JobTag[]>('/jobs/tags/available'),
 }
+
+export type * from '../types/models'

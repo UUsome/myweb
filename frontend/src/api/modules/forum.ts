@@ -37,3 +37,5 @@ export const forumApi = {
   createReply: (postId: number, content: string) =>
     apiClient.post<Reply>(`/posts/${postId}/replies`, { content }),
 }
+
+export type * from '../types/models'

@@ -3,13 +3,13 @@
     <div class="header-inner">
       <div class="logo">
         <router-link to="/">
-          <span class="logo-text">MyWeb</span>
+          <span class="logo-text">火风网</span>
         </router-link>
       </div>
 
       <nav class="nav-links">
         <router-link to="/forum" class="nav-item">论坛</router-link>
-        <router-link to="/experts" class="nav-item">专家库</router-link>
+        <!-- <router-link to="/experts" class="nav-item">专家库</router-link> -->
         <router-link to="/jobs" class="nav-item">人才集市</router-link>
       </nav>
 

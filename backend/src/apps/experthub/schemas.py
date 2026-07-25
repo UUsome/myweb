@@ -152,3 +152,7 @@ class ExpertHoverResponse(CoreSchema):
     platforms: list[PlatformResponse] = []
     cases: list[CaseResponse] = []
     tags: list[TagDefinitionResponse] = []
+
+
+class ContactContent(CoreSchema):
+    content: str = Field(default="", description="Markdown 内容")
