@@ -3,7 +3,7 @@
     <div class="header-inner">
       <div class="logo">
         <router-link to="/">
-          <span class="logo-text">火风网</span>
+          <span class="logo-text">win</span>
         </router-link>
       </div>
 

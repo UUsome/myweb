@@ -5,7 +5,7 @@
         <router-link to="/experts" class="footer-link">专家库</router-link>
         <router-link to="/contact" class="footer-link">联系我们</router-link>
       </div>
-      <p class="copyright">&copy; {{ year }} 火风网. All rights reserved.</p>
+      <p class="copyright">&copy; {{ year }} win. All rights reserved.</p>
     </div>
   </footer>
 </template>

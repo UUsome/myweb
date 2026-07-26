@@ -1,7 +1,7 @@
 <template>
   <div class="login-page">
     <div class="login-card">
-      <h1 class="login-title">火风网</h1>
+      <h1 class="login-title">win</h1>
       <p class="login-subtitle">专家社区 · 知识共享 · 人才对接</p>
 
       <el-form

@@ -4,7 +4,7 @@
     <aside class="admin-sidebar" :class="{ collapsed: appStore.sidebarCollapsed }">
       <div class="sidebar-header">
         <router-link to="/admin" class="sidebar-logo">
-          <span v-if="!appStore.sidebarCollapsed">火风网 管理</span>
+          <span v-if="!appStore.sidebarCollapsed">win 管理</span>
           <span v-else>M</span>
         </router-link>
       </div>
