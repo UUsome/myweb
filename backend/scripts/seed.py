@@ -3,17 +3,17 @@ from pathlib import Path
 
 # 把项目源码目录加到 Python 路径
 project_root = Path(__file__).parent.parent  # backend/
-src_path = project_root / "src"
-sys.path.insert(0, str(src_path))
+sys.path.insert(0, str(project_root))
+
 
 import asyncio
 
 from sqlalchemy import select
 
-from apps.users.models import User
-from apps.users.services import hash_password
-from apps.experthub.models import TagDefinition, ServiceDefinition
-from core.database import async_session_factory
+from src.apps.users.models import User
+from src.apps.users.services import hash_password
+from src.apps.experthub.models import TagDefinition, ServiceDefinition
+from src.core.database import async_session_factory
 
 
 async def seed():
